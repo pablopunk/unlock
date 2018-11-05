@@ -4,8 +4,17 @@
 
 ## Usage
 
+Remove the lock file from **all** the subdirectories of `src`:
+
 ```bash
 $ ./unlock ~/src
+```
+
+Keep in mind you can't run this script *inside* a repo, as it will look for subfolders. If you just want to do it individually, it's very straightforward:
+
+```bash
+rm package-lock.json
+echo 'package-lock=false' >> .npmrc
 ```
 
 ## Features
