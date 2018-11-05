@@ -44,7 +44,8 @@ do
 
     if [ is_git ]
     then
-      qgit add -A  > /dev/null && \
+      git rm package-lock.json > /dev/null && \
+        git add .npmrc  > /dev/null && \
         qgit commit -m "Remove package-lock.json" > /dev/null && \
         qgit push > /dev/null
     fi
